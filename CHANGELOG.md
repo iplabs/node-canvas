@@ -8,13 +8,25 @@ project adheres to [Semantic Versioning](http://semver.org/).
 (Unreleased)
 ==================
 ### Changed
+* Changed `DOMPoint()` constructor to check for parameter nullability.
+* Changed `DOMMatrix.js` to use string literals for non-special cases.
+* Remove semicolons from Dommatrix.js.
+### Added
+* Added `deregisterAllFonts` method to free up memory and reduce font conflicts.
+### Fixed
+
+2.8.0
+==================
+### Changed
 * Upgrade dtslint
 * Upgrade node-pre-gyp to 1.0.0. Note that if you are using special node-pre-gyp
   features like `node_pre_gyp_accessKeyId`, you may need to make changes to your
   installation procedure. See https://github.com/mapbox/node-pre-gyp/blob/master/CHANGELOG.md#100.
-* Add Node.js v15 to CI.
+* Add Node.js v16 to CI.
 * The C++ class method `nBytes()` now returns a size_t. (Because this is a C++
   method only, this is not considered a breaking change.)
+* Export type NodeCanvasRenderingContext2D so you can pass the current context
+  to functions (TypeScript).
 ### Added
 * Add support for  `inverse()` and `invertSelf()` to `DOMMatrix` (#1648)
 * Add support for `context.getTransform()` ([#1769](https://github.com/Automattic/node-canvas/pull/1769))
